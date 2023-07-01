@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <script>
+            function Display_Date(){
+            var x=new Date();
+            document.getElementById("ct").innerHTML=x;
+        }
+        </script>
+    </head>
+    <body onload=Display_Date();>
+        <span id="ct"></span>
+        <br/>
+        <br/>
+        
+        <form name="Reg" action="Registration.jsp" method="POST">
+            <pre>
+           Employee ID      :<input type="text" name="Empno" pattern="[0-9]+" title="Character pls" value=""   onfocusout="myFun()"  autofocus/>
+           First Name       :<input type="text" name="First_name" value="smith" />
+           Last Name        :<input type="text" name="Last_name" value="john" />
+           Date Of Birth    :<input type="text" name="dob" value="2019-02-02" />
+           Gender           :<input type="radio" name="Gender" value="Male" />Male
+                            :<input type="radio" name="Gender" value="Female" />Female
+           email            :<input type="text" name="Email" value="abc@gmail.com" />
+           Salary           :<input type="text" name="Salary" value="2500.00" />
+           
+           Department No       :<select name="Dept_no">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            </select>
+ <!--:<input type="text" name="Dept_no" value="20" /> -->
+           
+ <br>
+                        <input type="submit" name="submit" value="Submit" />
+            </pre>
+            
+        </form>
+
+        <script>
+    function myFun(){        
+    var empt=document.Reg.Empno.value;
+    if(empt==""){
+        var x=alert("Enter a Name");
+        windows.alert(x);
+        
+            document.getElementById("Empno").focus(); 
+            return false;
+       
+       
+        //return false;
+    }else{
+        return true;
+    }
+    }      
+        </script>
+    </body>
+</html>
